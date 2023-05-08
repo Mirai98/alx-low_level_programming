@@ -2,7 +2,7 @@
 
 /**
  * _strstr - a function that locates a substring
- * @haystack:
+ * @haystack:input
  * @needle: input
  * Return: to the beginning of the located substring,
  *         or NULL if the substring is not found.
