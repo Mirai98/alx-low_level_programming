@@ -1,26 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 /**
- * main - a program that adds positive numbers.
- * @argc: n of  arguments
- * @argv: array of pointers to argm
+ * check_n - check - string there are digit
+ * @str: array str
  *
  * Return: 0
  */
-int main(int argc, char *argv[])
+int check_n(char *str)
 {
-	int sum = 0;
-	char *A;
+	unsigned int c;
 
-	while (--argc)
+	c = 0;
+	while (c < strlen(str))
+
 	{
-		for (A = argv[argc]; *A; A++)
-			if (*A < '0' || *A > '9')
-				return (printf("Error\n"), 1);
-		sum += atoi(argv[]);
-	}
-printf("%d\n", sum);
+		if (!isdigit(str[c]))
+		{
+			return (0);
+		}
 
-return (0);
+		c++;
+	}
+	return (1);
+}
+
+/**
+ * main - Print the name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
+ *
+ * Return:0
+ */
+
+int main(int argc, char *argv[])
+
+{
+	int c;
+	int str_to_int;
+	int sum = 0;
+
+	c = 1;
+	while (c < argc)
+	{
+		if (check_n(argv[c]))
+
+		{
+			str_to_int = atoi(argv[c]);
+			sum += str_to_int;
+		}
+
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		c++;
+	}
+
+	printf("%d\n", sum);
+
+	return (0);
 }
