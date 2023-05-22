@@ -23,8 +23,8 @@ int _strlen(char *s)
 
 /**
  * *_strcpy -f the  copies the string pointed to by @src
- * @des : string
- * @src: string to copy
+ * @dest : string
+ * @src : string to copy
  *
  * Return: @dest
  */
