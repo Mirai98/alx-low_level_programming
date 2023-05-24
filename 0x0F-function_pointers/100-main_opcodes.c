@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	{
 		if (j == byt - 1)
 		{
-			printf("%02hhx\n", arr[j]);
+			printf("%02hhx\n", ar[j]);
 			break;
 		}
 		printf("%02hhx ", ar[j]);
