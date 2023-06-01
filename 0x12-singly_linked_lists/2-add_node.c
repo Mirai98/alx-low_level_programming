@@ -8,25 +8,24 @@
  * @head: the addres of p to head node
  * @str: a string to add in the node
  *
- * Return: head
+ * Return:the head
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *headnew;
-	unsigned int j = 0;
+	unsigned int len = 0;
+	list_t *HEAD_NEW;
 
-	while (str[j])
-		j++;
+	while (str[len])
+		len++;
 
-	headnew = malloc(sizeof(list_t));
-	if (!headnew)
-		return (NULL);
+	HEAD_NEW = malloc(sizeof(list_t));
+	if (!HEAD_NEW)
+		return (0);
 
-	headnew->str = strdup(str);
-	headnew->j = j;
-	headnew->next = (*head);
-	(*head) = headnew;
+	HEAD_NEW->str = strdup(str);
+	HEAD_NEW->len = len;
+	HEAD_NEW->next = (*head);
+	(*head) = HEAD_NEW;
 
 	return (*head);
 }
