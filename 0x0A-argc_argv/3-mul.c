@@ -13,18 +13,15 @@ int main(int argc, char *argv[])
 {
 	int N1 = 0, N2 = 0;
 
-	if (argc == 3)
+	while (argc == 3)
 	{
 			N1 = atoi(argv[1]);
 			N2 = atoi(argv[2]);
 			printf("%d\n", N1 * N2);
+			return (0);
 			}
-	else
-		{
+
 			printf("Error\n");
 			return (1);
-			}
 
-
-	return (0);
 }
